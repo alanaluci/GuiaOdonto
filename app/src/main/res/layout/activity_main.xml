@@ -1,0 +1,91 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="30dp"
+    tools:context="maddo.foo.telasplash.MainActivity"
+    android:id="@+id/LinearLayout"
+    android:textAlignment="center"
+    android:gravity="center_horizontal"
+    android:padding="0dp"
+    android:background="#ffc0c0c0">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#4dcbcbcb">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Estado"
+        android:id="@+id/txt_estado"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:background="#ff1a7dfa"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentTop="true"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textAlignment="gravity"
+        android:singleLine="true"
+        android:phoneNumber="false"
+        android:password="false"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignWithParentIfMissing="true"
+        android:padding="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:autoText="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:id="@+id/edt_filtra_estado"
+        android:background="@drawable/screen_border"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:enabled="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:linksClickable="false"
+        android:longClickable="false"
+        android:nestedScrollingEnabled="false"
+        android:text="Busca"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_below="@+id/txt_estado"
+        android:password="false"
+        android:phoneNumber="false"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textIsSelectable="false"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_margin="3dp"
+        android:autoText="false" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lst_View"
+        android:layout_gravity="center_horizontal"
+        android:background="#FFFF"
+        android:layout_below="@+id/edt_filtra_estado"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:headerDividersEnabled="false"
+        android:paddingTop="0dp" />
+
+</RelativeLayout>

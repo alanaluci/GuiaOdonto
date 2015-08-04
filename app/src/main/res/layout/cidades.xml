@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0dp"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"></FrameLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Cidades"
+        android:id="@+id/txt_cidades"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        android:background="#87CEFA"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentTop="true"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textAlignment="gravity"
+        android:singleLine="true"
+        android:phoneNumber="false"
+        android:password="false"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_margin="0dp"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignParentBottom="false"
+        android:padding="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:autoText="true" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/edt_cidades"
+        android:background="@drawable/screen_border"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:enabled="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:linksClickable="false"
+        android:longClickable="false"
+        android:nestedScrollingEnabled="false"
+        android:text="Filtra"
+        android:textStyle="bold"
+        android:textSize="16dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lst_cidades"
+        android:background="#FFFF"
+        android:layout_below="@+id/edt_filtra_estado" />
+
+</LinearLayout>

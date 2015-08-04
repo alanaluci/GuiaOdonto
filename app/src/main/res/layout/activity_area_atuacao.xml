@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="br.com.j5web.guiaodonto.area_atuacao"
+    android:padding="0dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Área de Atuação"
+        android:id="@+id/txt_area"
+        android:layout_alignParentStart="false"
+        android:background="#87CEFA"
+        android:layout_alignParentEnd="false"
+        android:textColor="#ffff"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textAlignment="gravity"
+        android:singleLine="true"
+        android:phoneNumber="false"
+        android:password="false"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_margin="0dp"
+        android:layout_alignWithParentIfMissing="true"
+        android:padding="0dp"
+        android:paddingLeft="0dp"
+        android:paddingTop="0dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="0dp"
+        android:autoText="true"
+        android:nestedScrollingEnabled="false" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:id="@+id/edt_area"
+        android:background="@drawable/screen_border"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
+        android:enabled="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignParentStart="false"
+        android:linksClickable="false"
+        android:longClickable="false"
+        android:nestedScrollingEnabled="false"
+        android:text="Filtra"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:layout_below="@+id/txt_area"
+        android:layout_alignParentRight="true"
+        android:textIsSelectable="false" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/lst_atuacao"
+        android:background="#FFFF"
+        android:layout_below="@+id/edt_area"
+        android:layout_alignParentRight="true" />
+</RelativeLayout>
