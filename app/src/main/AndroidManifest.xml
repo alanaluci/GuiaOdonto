@@ -6,7 +6,7 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_logo_splash"
         android:label="Guia Odonto"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/Theme.MyTheme" >
         <activity android:name=".SplashActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

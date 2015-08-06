@@ -1,17 +1,48 @@
 package maddo.foo.telasplash;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
+    private static String TAG = "LOG";
+    private Toolbar mToolbar;
+    private Toolbar mToolbarBottom;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mToolbar = (Toolbar) findViewById(R.id.tb_main);
+        mToolbar.setTitle("Main Activity");
+        mToolbar.setSubtitle("just a subtitle");
+        mToolbar.setLogo(R.drawable.ic_launcher);
+        setSupportActionBar(mToolbar);
+
+        mToolbarBottom = (Toolbar) findViewById(R.id.inc_tb_bottom);
+        mToolbarBottom.setOnMenuItemClickListener(new Toolbar.OnClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem menuItem) {
+                Intent it = null;
+                return true;
+            }
+        });
+        mToolbarBottom.inflateMenu(R.menu.menu_bottom);
+
+        mToolbarBottom.findViewById(R.id.iv_settings).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Settings pressed", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
 

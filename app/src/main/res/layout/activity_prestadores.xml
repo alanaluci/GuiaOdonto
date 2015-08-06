@@ -5,7 +5,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="br.com.j5web.guiaodonto.Prestadores"
-    android:padding="0dp">
+    android:padding="0dp"
+    android:id="@+id/">
 
     <FrameLayout
         android:layout_width="match_parent"
