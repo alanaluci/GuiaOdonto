@@ -9,5 +9,14 @@
     <string name="title_activity_prestadores">Prestadores</string>
     <string name="title_activity_prestador">Prestador</string>
 
+    <string name="app_name">TCMaterialDesign</string>
+
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="action_second_activity">SecondActivity</string>
+    <string name="action_facebook">Facebook</string>
+    <string name="action_youtube">YouTube</string>
+    <string name="action_google_plus">Google Plus</string>
+    <string name="action_linkedin">LinkedIn</string>
+    <string name="action_whatsapp">WhatsApp</string>
 
 </resources>

@@ -27,7 +27,7 @@ public class MainActivity extends ActionBarActivity {
         setSupportActionBar(mToolbar);
 
         mToolbarBottom = (Toolbar) findViewById(R.id.inc_tb_bottom);
-        mToolbarBottom.setOnMenuItemClickListener(new Toolbar.OnClickListener() {
+        mToolbarBottom.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener(){
             @Override
             public boolean onMenuItemClick(MenuItem menuItem) {
                 Intent it = null;
