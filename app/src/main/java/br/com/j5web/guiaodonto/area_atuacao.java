@@ -9,7 +9,7 @@ import maddo.foo.telasplash.R;
 
 
 public class area_atuacao extends ActionBarActivity {
-//alana comentou aqui
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
