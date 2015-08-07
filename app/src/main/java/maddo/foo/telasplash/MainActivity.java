@@ -41,11 +41,26 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+
+        listview = (ListView) findViewById(R.id.ListView);
+        txtEstados = (TextView) findViewById(R.id.txtCategory);
+
+        estadosList = new ArrayList<Estados>();
+
+        // spinner item select listener
+        listview.setOnItemSelectedListener(this);
+
+        new GetEstados().execute();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
         mToolbar = (Toolbar) findViewById(R.id.tb_main);
-        mToolbar.setTitle("Main Activity");
+        mToolbar.setTitle("Guia Odonto");
         mToolbar.setSubtitle("just a subtitle");
         mToolbar.setLogo(R.drawable.ic_launcher);
         setSupportActionBar(mToolbar);
@@ -110,23 +125,6 @@ public class MainActivity extends ActionBarActivity {
     // Url to get all categories
     private String URL_ESTADOS = "http://servdonto.no-ip.org/prestadores/android/guia/index1.php";
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-
-        listview = (ListView) findViewById(R.id.ListView);
-        txtEstados = (TextView) findViewById(R.id.txtCategory);
-
-        estadosList = new ArrayList<Estados>();
-
-        // spinner item select listener
-        listview.setOnItemSelectedListener(this);
-
-        new GetEstados().execute();
-
-    }
 
     /**
      * Adding spinner data
