@@ -38,6 +38,8 @@ public class MainActivity extends ActionBarActivity {
     private static String TAG = "LOG";
     private Toolbar mToolbar;
     private Toolbar mToolbarBottom;
+    private ListView listview;
+    private TextView txtEstados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +54,7 @@ public class MainActivity extends ActionBarActivity {
         estadosList = new ArrayList<Estados>();
 
         // spinner item select listener
-        listview.setOnItemSelectedListener(this);
+        listview.setOnItemSelectedListener((OnItemSelectedListener) this);
 
         new GetEstados().execute();
 
@@ -135,17 +137,17 @@ public class MainActivity extends ActionBarActivity {
         txtEstados.setText("");
 
         for (int i = 0; i < estadosList.size(); i++) {
-            lables.add(estadosList.get(i).getName());
+            lables.add(estadosList.get(i).getUf());
         }
 
         // Creating adapter for listview
         ArrayAdapter<String> listViewAdapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_ListView_item, lables);
+                android.R.layout.simple_list_item_1, lables);
 
 
 
         // attaching data adapter to spinner
-        listView.setAdapter(listViewAdapter);
+        listview.setAdapter(listViewAdapter);
     }
     /**
      * Async task to get all food categories
